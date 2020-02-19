@@ -1,0 +1,21 @@
+<home wx:if="{{PageCur=='home'}}"></home>
+<component wx:if="{{PageCur=='component'}}"></component>
+<plugin wx:if="{{PageCur=='plugin'}}"></plugin>
+<about wx:if="{{PageCur=='about'}}"></about>
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view class="action" bindtap="NavChange" data-cur="home">
+    <!-- <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/basics{{PageCur=='basics'?'_cur':''}}.png"></image>
+    </view> -->
+    <view class="cuIcon-homefill {{PageCur=='home'?'text-mauve':'text-gray'}}"></view>
+    <view class="{{PageCur=='home'?'text-mauve':'text-gray'}}">首页</view>
+  </view>
+  <!--<view class="action" bindtap="NavChange" data-cur="component">-->
+    <!--<view class="cuIcon-similar {{PageCur=='component'?'text-mauve':'text-gray'}}"></view>-->
+    <!--<view class="{{PageCur=='component'?'text-mauve':'text-gray'}}">排行</view>-->
+  <!--</view>-->
+  <view class="action" bindtap="NavChange" data-cur="about">
+  <view class="cuIcon-my {{PageCur=='about'?'text-mauve':'text-gray'}}"></view>
+    <view class="{{PageCur=='about'?'text-mauve':'text-gray'}}">关于</view>
+  </view>
+</view>

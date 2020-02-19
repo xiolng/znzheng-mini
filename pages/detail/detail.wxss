@@ -1,0 +1,93 @@
+.comment-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(30, 20, 20, 0.1);
+  z-index: 100;
+  /*margin-bottom:2rpx; */
+}
+.comment-respond {
+  margin-top: 2rpx;
+}
+.comment-input {
+  background-color: #f5f7f7;
+  margin-top: 12rpx;
+  margin-left: 12rpx;
+  padding: 2rpx 3rpx 2rpx 10rpx;
+  padding-left: 24rpx;
+  font-size: 14px;
+  height: 60rpx;
+  width: 300rpx;
+  text-align: left;
+  /* border: 1px solid #296fd0; */
+  border-radius: 20px;
+}
+.comment-box {
+  padding: 8rpx 4rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.comment-button {
+  margin-top: 12rpx;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  height: 60rpx;
+  margin-left: 20rpx;
+  border-radius: 20px;
+  text-align: center;
+  padding: 0 2px !important;
+  font-size: 14px;
+  background-color: rgb(3, 173, 0);
+  color: #ffffff;
+}
+.img-plus {
+  width: 48rpx !important;
+  height: 48rpx !important;
+}
+.cmview {
+  margin-left: 20rpx;
+  margin-right: 5rpx;
+  display: flex;
+  flex-direction: column;
+  font-size: 24rpx;
+  align-items: center;
+  width: 78rpx;
+  flex-shrink: 0;
+}
+.cmicontext {
+  margin-top: 5rpx;
+  font-size: 24rpx;
+  color: rgb(114, 114, 114);
+  align-content: left;
+}
+.canvas-box{
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 999999rpx;
+}
+.share-image {
+  width: 600rpx;
+  height: 888rpx;
+  margin: 0 75rpx;
+  border: 1px solid black;
+}
+.sharetext {
+  margin-top: 36rpx;
+  width: 100%;
+  max-height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36rpx;
+  color: rgb(173, 25, 25);
+}
+.sharebtn {
+  width: 48rpx !important;
+  height: 48rpx !important;
+  border: none !important;
+}

@@ -1,0 +1,11 @@
+<template name="foot">
+  <view style="text-align: center; margin-top: 40rpx;">
+    <view class="footerview" style="margin-bottom: 20rpx;">
+      <text>@2020 宁小邶的博客</text>
+    </view>
+    <view class="footerviewwebsite">
+      <a target="_black" href="http://www.beian.miit.gov.cn">冀ICP备16011331号-1</a>
+    </view>
+  </view>
+
+</template>

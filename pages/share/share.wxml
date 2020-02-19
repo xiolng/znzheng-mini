@@ -1,0 +1,14 @@
+<view class="scrollPage">
+  <cu-custom bgColor="bg-gradual-green" isCustom="{{true}}">
+    <view slot="content">分享</view>
+  </cu-custom>
+  <view class="container" style="padding: 100rpx 0;">
+    <image src="{{shareImage}}" class="share-image"></image>
+    <canvasdrawer painting="{{painting}}" class="canvasdrawer" bind:getImage="eventGetImage"/>
+    <view class="sharetext">
+      <text >{{notification}}</text>
+    </view>
+  </view>
+  <import src="../../template/foot.wxml"/>
+  <template is="foot"></template>
+</view>

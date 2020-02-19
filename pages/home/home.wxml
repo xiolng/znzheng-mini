@@ -1,0 +1,98 @@
+<view class="scrollPage">
+  <cu-custom bgColor="bg-gradual-pink" isBack="{{false}}">
+  </cu-custom>
+  <view wx:if="{{swipelist.length}}">
+    <swiper
+      class="screen-swiper square-dot"
+      indicator-dots="true"
+      circular="true"
+      autoplay="true"
+      interval="5000"
+      duration="500"
+    >
+      <swiper-item wx:for="{{swipelist}}" wx:key="id">
+        <navigator class="navigator_item" hover-class="navigator-hover" url="../detail/detail?item={{item.cid}}"
+                   style="width: 100%;height: 100%;">
+          <image src="{{item.thumb}}" mode="aspectFill"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="scroll_box">
+    <scroll-view class="bg-white nav text-center shadow shadow-lg solid-bottom" scroll-with-animation="True" scroll-into-view="{{current_position}}"
+                 scroll-x>
+      <block wx:for="{{allcatslist}}" wx:key="item">
+        <view id="{{item.id_tag}}" class="cu-item {{item.active? 'text-blue cur':''}}" bindtap="changeCat"
+              data-mid="{{item.mid}}">
+          <text class="cuIcon-{{iconList[index]}}"></text>
+          {{item.name}}
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <swiper
+    style="min-height: calc(100vh - 180px)"
+    bindchange="change_finish" duration="200"
+    current="{{current_cat}}"
+    circular="True"
+    indicator-color='rgba(0, 0, 0, 0)'
+    indicator-active-color='rgba(0, 0, 0, 0)'
+    indicator-dots="false"
+    lower-threshold="50"
+  >
+    <block wx:for="{{allcatpostlist}}" wx:key="id" wx:for-item="item_cat">
+      <swiper-item style="background-color: transparent;">
+        <view class="classify">
+          <scroll-view
+            class="list-scroll"
+            scroll-y
+            enable-back-to-top="true"
+            scroll-with-animation="true"
+          >
+            <view class="children">
+              <block wx:key="id" wx:for="{{item_cat}}">
+                <navigator class="nav_postlist_item" hover-class="navigator-hover"
+                           url="../detail/detail?item={{item.cid}}">
+                  <view class="cu-card case">
+                    <view class="cu-item shadow">
+                      <view class="image">
+                        <image
+                          src="{{item.thumb[0].str_value || 'https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg'}}"
+                          mode="widthFix"></image>
+                        <view class="cu-tag bg-blue">史诗</view>
+                        <view class="cu-bar bg-shadeBottom">
+                          <text class="text-cut">{{item.title}}</text>
+                        </view>
+                      </view>
+                      <view class="cu-list menu-avatar">
+                        <view class="cu-item">
+                          <view class="cu-avatar round lg"
+                                style="background-image:url(https://znzheng.com/image/100.gif);"></view>
+                          <view class="content flex-sub">
+                            <view class="text-grey">宁小邶</view>
+                            <view class="text-gray text-sm flex justify-between">
+                              {{item.posttime}}
+                              <view class="text-gray text-sm">
+                                <text class="cuIcon-attentionfill margin-lr-xs"></text>
+                                {{item.views}}
+                                <text class="cuIcon-appreciatefill margin-lr-xs"></text>
+                                {{item.likes}}
+                                <text class="cuIcon-messagefill margin-lr-xs"></text>
+                                {{item.commentsNum}}
+                              </view>
+                            </view>
+                          </view>
+                        </view>
+                      </view>
+                    </view>
+                  </view>
+                </navigator>
+              </block>
+            </view>
+          </scroll-view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+
+</view>

@@ -1,0 +1,8 @@
+@import "colorui/main.wxss";
+@import "colorui/icon.wxss";
+@import "colorui/animation.wxss";
+.scrollPage {
+  min-height: calc(100vh - 50px);
+  padding-bottom: 100rpx;
+  background: #fff;
+}
